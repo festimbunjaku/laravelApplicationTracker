@@ -7,6 +7,16 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class JobApplication extends Model
 {
+    //    Fillable fields
+    protected $fillable = [
+        'link',
+        'title',
+        'position',
+        'company',
+        'status',
+        'notes',
+    ];
+
     //    Belongs to one User
     public function user(): BelongsTo
     {
