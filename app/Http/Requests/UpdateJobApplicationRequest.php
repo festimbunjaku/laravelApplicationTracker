@@ -2,9 +2,7 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
-
-class UpdateJobApplicationRequest extends FormRequest
+class UpdateJobApplicationRequest extends BaseFormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,7 +24,7 @@ class UpdateJobApplicationRequest extends FormRequest
             'title' => 'sometimes|string|max:255',
             'position' => 'sometimes|string|max:255',
             'company' => 'sometimes|string|max:255',
-            'status' => 'nullable|string|in:pending,interview, approved, rejected',
+            'status' => 'nullable|string|in:pending,interview,approved,rejected,in_progress',
             'notes' => 'nullable|string',
         ];
     }

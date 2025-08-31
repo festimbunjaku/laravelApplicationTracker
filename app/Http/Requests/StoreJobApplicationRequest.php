@@ -2,9 +2,7 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
-
-class StoreJobApplicationRequest extends FormRequest
+class StoreJobApplicationRequest extends BaseFormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,7 +24,7 @@ class StoreJobApplicationRequest extends FormRequest
             'title' => 'required|string|max:255',
             'position' => 'required|string|max:255',
             'company' => 'required|string|max:255',
-            'status' => 'nullable|string|in:pending,interview, approved, rejected',
+            'status' => 'nullable|string|in:pending,interview,approved,rejected,in_progress',
             'notes' => 'nullable|string',
         ];
     }
