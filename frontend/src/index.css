@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Elegant Light Theme - Subtle & Refined */
+  --color-background: hsl(210 20% 98%);
+  --color-foreground: hsl(215 25% 15%);
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(215 25% 15%);
+  --color-popover: hsl(0 0% 100%);
+  --color-popover-foreground: hsl(215 25% 15%);
+  --color-primary: hsl(215 22% 34%);
+  --color-primary-foreground: hsl(0 0% 100%);
+  --color-secondary: hsl(212 12% 93%);
+  --color-secondary-foreground: hsl(215 25% 15%);
+  --color-muted: hsl(214 15% 95%);
+  --color-muted-foreground: hsl(215 10% 50%);
+  --color-accent: hsl(213 18% 91%);
+  --color-accent-foreground: hsl(215 25% 15%);
+  --color-destructive: hsl(0 45% 50%);
+  --color-destructive-foreground: hsl(0 0% 100%);
+  --color-success: hsl(155 40% 38%);
+  --color-success-foreground: hsl(0 0% 100%);
+  --color-warning: hsl(32 60% 45%);
+  --color-warning-foreground: hsl(0 0% 100%);
+  --color-info: hsl(205 55% 45%);
+  --color-info-foreground: hsl(0 0% 100%);
+  --color-border: hsl(214 18% 87%);
+  --color-input: hsl(214 15% 95%);
+  --color-ring: hsl(215 22% 34%);
+  --radius: 0.75rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  @theme {
+    /* Elegant Dark Theme - Subtle & Refined */
+    --color-background: hsl(215 28% 8%);
+    --color-foreground: hsl(213 15% 92%);
+    --color-card: hsl(215 25% 10%);
+    --color-card-foreground: hsl(213 15% 92%);
+    --color-popover: hsl(215 25% 10%);
+    --color-popover-foreground: hsl(213 15% 92%);
+    --color-primary: hsl(213 20% 75%);
+    --color-primary-foreground: hsl(215 28% 8%);
+    --color-secondary: hsl(215 20% 15%);
+    --color-secondary-foreground: hsl(213 15% 92%);
+    --color-muted: hsl(215 20% 13%);
+    --color-muted-foreground: hsl(215 12% 65%);
+    --color-accent: hsl(215 22% 18%);
+    --color-accent-foreground: hsl(213 15% 92%);
+    --color-destructive: hsl(0 45% 65%);
+    --color-destructive-foreground: hsl(215 28% 8%);
+    --color-success: hsl(155 40% 65%);
+    --color-success-foreground: hsl(215 28% 8%);
+    --color-warning: hsl(32 60% 65%);
+    --color-warning-foreground: hsl(215 28% 8%);
+    --color-info: hsl(205 55% 65%);
+    --color-info-foreground: hsl(215 28% 8%);
+    --color-border: hsl(215 22% 20%);
+    --color-input: hsl(215 20% 15%);
+    --color-ring: hsl(213 20% 75%);
+  }
+}
+
+body {
+  font-family: "Inter Variable", "Inter", system-ui, sans-serif;
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/* Toast styling for better visibility */
+[data-sonner-toaster] {
+  z-index: 9999 !important;
+  position: fixed !important;
+  top: 80px !important;
+  right: 16px !important;
+}
+
+[data-sonner-toast] {
+  background: hsl(var(--background)) !important;
+  border: 1px solid hsl(var(--border)) !important;
+  color: hsl(var(--foreground)) !important;
+}
+
+[data-sonner-toast][data-type="success"] {
+  background: hsl(142 76% 36% / 0.1) !important;
+  border-color: hsl(142 76% 36% / 0.3) !important;
+  color: hsl(142 76% 36%) !important;
+}
+
+[data-sonner-toast][data-type="error"] {
+  background: hsl(0 72% 51% / 0.1) !important;
+  border-color: hsl(0 72% 51% / 0.3) !important;
+  color: hsl(0 72% 51%) !important;
+}
+
+[data-sonner-toast][data-type="warning"] {
+  background: hsl(32 60% 45% / 0.1) !important;
+  border-color: hsl(32 60% 45% / 0.3) !important;
+  color: hsl(32 60% 45%) !important;
+}
+
+[data-sonner-toast][data-type="info"] {
+  background: hsl(205 55% 45% / 0.1) !important;
+  border-color: hsl(205 55% 45% / 0.3) !important;
+  color: hsl(205 55% 45%) !important;
+}
+
+.dark [data-sonner-toast][data-type="success"] {
+  background: hsl(142 76% 36% / 0.15) !important;
+  border-color: hsl(142 76% 36% / 0.4) !important;
+  color: hsl(142 71% 45%) !important;
+}
+
+.dark [data-sonner-toast][data-type="error"] {
+  background: hsl(0 72% 51% / 0.15) !important;
+  border-color: hsl(0 72% 51% / 0.4) !important;
+  color: hsl(0 45% 65%) !important;
+}
+
+.dark [data-sonner-toast][data-type="warning"] {
+  background: hsl(32 60% 45% / 0.15) !important;
+  border-color: hsl(32 60% 45% / 0.4) !important;
+  color: hsl(32 60% 65%) !important;
+}
+
+.dark [data-sonner-toast][data-type="info"] {
+  background: hsl(205 55% 45% / 0.15) !important;
+  border-color: hsl(205 55% 45% / 0.4) !important;
+  color: hsl(205 55% 65%) !important;
+}

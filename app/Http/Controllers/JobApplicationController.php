@@ -99,6 +99,7 @@ class JobApplicationController extends Controller
         return response()->json([
             'status' => 'success',
             'message' => 'Job application deleted successfully',
-        ], 204);
+         'data' => null,
+        ], 200);
     }
 }
