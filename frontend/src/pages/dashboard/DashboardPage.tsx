@@ -98,7 +98,7 @@ export default function DashboardPage() {
           className="mb-8"
         >
           <h2 className="text-3xl font-light text-slate-900 dark:text-slate-100 mb-2">
-            Welcome back, {user?.name?.split(' ')[0]}! 👋
+            Welcome back, {user?.name?.split(' ')[0]}!
           </h2>
           <p className="text-slate-600 dark:text-slate-400">
             Track your job applications and manage your career journey.

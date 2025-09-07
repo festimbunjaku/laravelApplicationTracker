@@ -88,12 +88,29 @@ export default function LandingPage() {
             </div>
             <div className="mt-10 flex items-center gap-x-6">
               <div className="flex -space-x-2 overflow-hidden">
-                {[1, 2, 3, 4, 5].map((i) => (
-                  <div
-                    key={i}
-                    className="inline-block h-8 w-8 rounded-full bg-gradient-to-r from-slate-400 to-slate-600 ring-2 ring-white dark:ring-slate-800"
-                  />
-                ))}
+             
+             {/* Laravel Icon */}
+              <div className="h-8 w-8 rounded-full bg-white dark:bg-slate-800 ring-2 ring-white dark:ring-slate-800 flex items-center justify-center hover:scale-110 transition-transform duration-200">
+                  <img src="/icons/laravel.svg" alt="Laravel" className="h-5 w-5" />
+                </div>
+                
+                {/* React Icon */}
+                <div className="h-8 w-8 rounded-full bg-white dark:bg-slate-800 ring-2 ring-white dark:ring-slate-800 flex items-center justify-center hover:scale-110 transition-transform duration-200">
+                  <img src="/icons/react.svg" alt="React" className="h-5 w-5" />
+                </div>
+                
+                {/* TypeScript Icon */}
+                <div className="h-8 w-8 rounded-full bg-white dark:bg-slate-800 ring-2 ring-white dark:ring-slate-800 flex items-center justify-center hover:scale-110 transition-transform duration-200">
+                  <img src="/icons/typescript.svg" alt="TypeScript" className="h-5 w-5" />
+                </div>
+                
+                {/* Laravel Icon */}
+
+                
+                {/* Tailwind CSS Icon */}
+                <div className="h-8 w-8 rounded-full bg-white dark:bg-slate-800 ring-2 ring-white dark:ring-slate-800 flex items-center justify-center hover:scale-110 transition-transform duration-200">
+                  <img src="/icons/tailwindcss.svg" alt="Tailwind CSS" className="h-5 w-5" />
+                </div>
               </div>
               <div className="text-sm leading-6 text-slate-600 dark:text-slate-400">
                 <strong className="font-semibold text-slate-900 dark:text-slate-100">Portfolio</strong> project showcasing full-stack development
